@@ -13,7 +13,7 @@ const Navbar = () => {
   const displayMenu = () => {
     return menus.map((menu) => (
       <li>
-        <Link className="text-lg hover:text-[#013047]" to={menu.to}>
+        <Link className="text-lg hover:text-[#013047] hover:underline" to={menu.to}>
           {menu.name}
         </Link>
       </li>
@@ -21,8 +21,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar shadow-md absolute">
-      <div className="navbar-start lg:px-48 py-2">
+    <div className="navbar shadow-md absolute px-20">
+      <div className="navbar-start  py-2">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="px-1 flex justify-center gap-10">{displayMenu()}</ul>
       </div>
-      <div className="navbar-end lg:px-48 py-2 justify-end">
+      <div className="navbar-end py-2 justify-end">
         <a className="btn btn-accent rounded-full lg:px-8 btn-sm text-xs lg:font-bold text-white ">
           Konsultasi Sekarang
         </a>
